@@ -65,6 +65,8 @@ namespace HLesson_Inheritance
         {
             StringBuilder textSummaryBuilder = new StringBuilder();
 
+            textSummaryBuilder.Append($"\n\n ****** START {this.GetType().ToString()} BASE GetVehicleDetails() VALUES ****** \n\n");
+
             textSummaryBuilder.Append($"{this.GetType().ToString()} doors : {doors} \n");
             textSummaryBuilder.Append($"{this.GetType().ToString()} seats : {seats} \n");
             textSummaryBuilder.Append($"{this.GetType().ToString()} colors : {color} \n");
@@ -74,6 +76,25 @@ namespace HLesson_Inheritance
             // Print summary of vehicle details to console.
             Console.WriteLine(textSummaryBuilder.ToString());
         }
+
+        public override string ToString()
+        {
+            StringBuilder textSummaryBuilder = new StringBuilder();
+
+            textSummaryBuilder.Append($"\n\n ****** START {this.GetType().ToString()} BASE ToString() VALUES ****** \n\n");
+
+            textSummaryBuilder.Append($"{this.GetType().ToString()} doors : {doors} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} seats : {seats} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} colors : {color} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} wheels : {wheels} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} year made : {yearMade}");
+
+            // Print summary of vehicle details to console.
+            // Console.WriteLine(textSummaryBuilder.ToString());
+
+            return textSummaryBuilder.ToString();
+        }
+
 
         #endregion
 

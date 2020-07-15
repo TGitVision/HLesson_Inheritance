@@ -37,11 +37,34 @@ namespace HLesson_Inheritance
 
             StringBuilder textSummaryBuilder = new StringBuilder();
 
+            textSummaryBuilder.Append($"\n ****** START {this.GetType().ToString()} CHILD GetVehicleDetails() VALUES ****** \n\n");
+
             textSummaryBuilder.Append($"{this.GetType().ToString()} blnHasRims : {blnHasRims} \n");
             textSummaryBuilder.Append($"{this.GetType().ToString()} blnIsConvertable : {blnIsConvertable} \n");
 
             // Print summary of vehicle details to console.
             Console.WriteLine(textSummaryBuilder.ToString());
+
+        }
+
+        public override string ToString()         
+        {
+
+            StringBuilder textSummaryBuilder = new StringBuilder();
+
+            textSummaryBuilder.Append(base.ToString());
+
+            textSummaryBuilder.Append($"\n ****** START {this.GetType().ToString()} CHILD ToString() VALUES ****** \n\n");
+
+            textSummaryBuilder.Append($"{this.GetType().ToString()} blnHasRims : {blnHasRims} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} blnIsConvertable : {blnIsConvertable} \n");
+
+            //// Print summary of vehicle details to console.
+            //Console.WriteLine(textSummaryBuilder.ToString());
+
+            // Return vehicle details as a string
+            return textSummaryBuilder.ToString();
+
         }
 
         #endregion

@@ -39,12 +39,33 @@ namespace HLesson_Inheritance
 
             StringBuilder textSummaryBuilder = new StringBuilder();
 
+            textSummaryBuilder.Append($"\n\n ****** START {this.GetType().ToString()} CHILD GetVehicleDetails() VALUES ****** \n\n");
+
             textSummaryBuilder.Append($"{this.GetType().ToString()} blnHasRims : {blnHasRutters} \n");
             textSummaryBuilder.Append($"{this.GetType().ToString()} blnIsConvertable : {blnHasSails} \n");
             textSummaryBuilder.Append($"{this.GetType().ToString()} boatType : {boatType} \n");
 
             // Print summary of vehicle details to console.
             Console.WriteLine(textSummaryBuilder.ToString());
+        }
+
+        public override string ToString()
+        {
+
+            StringBuilder textSummaryBuilder = new StringBuilder();
+
+            textSummaryBuilder.Append(base.ToString());
+
+            textSummaryBuilder.Append($"\n\n ****** START {this.GetType().ToString()} CHILD ToString() VALUES ****** \n\n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} blnHasRims : {blnHasRutters} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} blnIsConvertable : {blnHasSails} \n");
+            textSummaryBuilder.Append($"{this.GetType().ToString()} boatType : {boatType} \n");
+
+            //// Print summary of vehicle details to console.
+            // Console.WriteLine(textSummaryBuilder.ToString());
+
+            return textSummaryBuilder.ToString();
+
         }
 
         #endregion
