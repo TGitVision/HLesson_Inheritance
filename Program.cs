@@ -8,7 +8,7 @@ namespace HLesson_Inheritance
         {
             Console.WriteLine("Hello World from HLesson_Inheritance!");
 
-            //////// Declare and call classes here...added by th 07142020
+            //////// Declare and call base classes here...added by th 07142020
             //////Vehicle vehicle1 = new Vehicle(4, 6, "red", 4);
             //////vehicle1.Start();
             //////vehicle1.Stop();
